@@ -1,0 +1,5 @@
+class FriendshipSerializer < ActiveModel::Serializer
+  attributes :id, :created_at, :friend_a_id, :friend_b_id
+  belongs_to :friend_a
+  belongs_to :friend_b
+end

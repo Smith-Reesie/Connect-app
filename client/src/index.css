@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Overpass:wght@100&family=Permanent+Marker&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+
+body {
+  background-image: url(./Img/vector-background-material-the-chemical-structure-7614fec4f52d72c7ee80c1568f2d4e08.png);
+  background-size: cover;
+  background-color: rgba(7, 7, 7, 0.384);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Overpass', sans-serif;
+}
+
+@layer components {
+  .sidebar-icon {
+    @apply relative flex items-center justify-center h-12 w-12 mt-7 mb-7 mx-auto shadow-lg 
+  text-green-900 
+  hover:text-[green] cursor-pointer;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-0 min-w-max left-10  top-10 rounded-md shadow-md text-white bg-[black] text-xs font-bold transition-all duration-100 scale-0 origin-bottom;
+  }
+  .sidebar-tooltip2 {
+    @apply absolute w-auto p-2 m-0 min-w-max left-10  top-10 rounded-md shadow-md text-white bg-[#be3030] text-xs font-bold transition-all duration-100 scale-0 origin-bottom;
+  }
+
+  .logout {
+    @apply top-6;
+  }
+  .button {
+    @apply p-1 m-1 bg-[#245f96] hover:to-yellow-500 rounded;
+  }
+
+  .dclBtn {
+    @apply p-1 m-1 bg-gradient-to-l from-pink-500 to-yellow-500 rounded;
+  }
+
+  @layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
